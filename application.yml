@@ -1,2 +1,15 @@
-name:
-  xiaoming: hhh
+spring:
+  profiles:
+    active:
+      - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: dev-0
+
+---
+spring:
+  profiles: test
+  application:
+    name: test-0
