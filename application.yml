@@ -1,9 +1,15 @@
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: git@github.com:blogsay/cloud-config.git
+  profiles:
+    active:
+      - dev
+---
+spring:
+  profiles: dev
+  application:
+    name: dev-0
 
-server:
-  port: 3344
+---
+spring:
+  profiles: test
+  application:
+    name: test-0
